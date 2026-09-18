@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ROT13 Converter | Dermawan Sadawa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+
+            <div class="logo">
+                🔐
+            </div>
+
+            <h1>ROT13 Converter</h1>
+
+            <p>
+                Simple Text Encoder & Decoder
+            </p>
+
+        </header>
+
+
+        <section class="text-section">
+
+            <div class="section-title">
+
+                <label for="inputText">
+                    🔤 Input Text
+                </label>
+
+                <span id="inputCount">
+                    0 characters
+                </span>
+
+            </div>
+
+            <textarea
+                id="inputText"
+                placeholder="Masukkan teks di sini..."
+            ></textarea>
+
+        </section>
+
+
+        <div class="main-buttons">
+
+            <button
+                class="encode-button"
+                onclick="convertROT13()"
+            >
+                🔐 Encode ROT13
+            </button>
+
+            <button
+                class="decode-button"
+                onclick="convertROT13()"
+            >
+                🔓 Decode ROT13
+            </button>
+
+        </div>
+
+
+        <section class="text-section">
+
+            <div class="section-title">
+
+                <label for="outputText">
+                    📝 Result
+                </label>
+
+                <span id="outputCount">
+                    0 characters
+                </span>
+
+            </div>
+
+            <textarea
+                id="outputText"
+                placeholder="Hasil akan muncul di sini..."
+                readonly
+            ></textarea>
+
+        </section>
+
+
+        <div class="action-buttons">
+
+            <button
+                class="copy-button"
+                onclick="copyResult()"
+            >
+                📋 Copy
+            </button>
+
+            <button
+                class="swap-button"
+                onclick="swapText()"
+            >
+                🔄 Swap
+            </button>
+
+            <button
+                class="clear-button"
+                onclick="clearText()"
+            >
+                🗑 Clear
+            </button>
+
+        </div>
+
+
+        <div class="info">
+
+            <strong>
+                💡 Cara Kerja ROT13
+            </strong>
+
+            <p>
+                Setiap huruf digeser 13 posisi dalam alfabet.
+                Encode dan Decode menggunakan proses yang sama.
+            </p>
+
+        </div>
+
+
+        <section class="rot13-table">
+
+            <div class="table-header">
+                📚 ROT13 Alphabet Table
+            </div>
+
+            <p class="table-description">
+                Gunakan tabel ini untuk mempelajari perubahan setiap huruf.
+            </p>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <tr>
+                        <th>Asli</th>
+
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>H</td>
+                        <td>I</td>
+                        <td>J</td>
+                        <td>K</td>
+                        <td>L</td>
+                        <td>M</td>
+                    </tr>
+
+                    <tr>
+                        <th>ROT13</th>
+
+                        <td>N</td>
+                        <td>O</td>
+                        <td>P</td>
+                        <td>Q</td>
+                        <td>R</td>
+                        <td>S</td>
+                        <td>T</td>
+                        <td>U</td>
+                        <td>V</td>
+                        <td>W</td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>Z</td>
+                    </tr>
+
+                    <tr>
+                        <th>Asli</th>
+
+                        <td>N</td>
+                        <td>O</td>
+                        <td>P</td>
+                        <td>Q</td>
+                        <td>R</td>
+                        <td>S</td>
+                        <td>T</td>
+                        <td>U</td>
+                        <td>V</td>
+                        <td>W</td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>Z</td>
+                    </tr>
+
+                    <tr>
+                        <th>ROT13</th>
+
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>H</td>
+                        <td>I</td>
+                        <td>J</td>
+                        <td>K</td>
+                        <td>L</td>
+                        <td>M</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <div class="footer-line"></div>
+
+            <p>
+                Developed by
+            </p>
+
+            <h3>
+                Dermawan Sadawa
+            </h3>
+
+            <small>
+                © 2026 ROT13 Converter
+            </small>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
